@@ -37,6 +37,15 @@
     </div>
     <script type="text/javascript">
 
+      let inner = document.querySelector('#inner');
+      let offsetCoords = document.querySelector('#offsetCoords');
+      let pageCoords = document.querySelector('#pageCoords');
+
+      inner.addEventListener('mousemove', function(banan) {
+        offsetCoords.textContent = 'offset: ' + banan.offsetX + ', ' + banan.offsetY;
+        pageCoords.textContent = 'page: ' + banan.pageX + ', ' +banan.pageY;
+      });
+
 
 
     </script>

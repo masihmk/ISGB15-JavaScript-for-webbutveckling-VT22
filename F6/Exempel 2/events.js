@@ -7,10 +7,12 @@ window.addEventListener("load", prepareGUI, false);
 function prepareGUI() {
 	
 	//b
-	window.document.querySelector("b").addEventListener("click", function(oEvent) {
+	document.querySelector("b").addEventListener("click", function(oEvent) {
 		
 		window.console.log("Target: " + oEvent.target.tagName);
 		window.console.log("CurrentTarget: " + oEvent.currentTarget.tagName);
+
+		oEvent.stopPropagation();
 		
 		if(oEvent.target === oEvent.currentTarget) {
 			window.console.log("Yes");
@@ -49,4 +51,5 @@ function prepareGUI() {
 		window.console.log("CurrentTarget: " + oEvent.currentTarget.tagName);
 		
 	}, false); 
+	
 }
